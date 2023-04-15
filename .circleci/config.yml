@@ -4,7 +4,7 @@ version: 2.1
   one:
    docker:
      - image: cimg/ruby:2.6.8
-      auth:
+       auth:
          username: mydockerhub-user
          password: $DOCKERHUB_PASSWORD
    steps:
@@ -14,7 +14,7 @@ version: 2.1
    two:
     docker:
      -image: cimg/ruby:3.0.2
-     auth:
+      auth:
        username: mydockerhun-user
        password: $DOCKERHUB_PASSWORD
      steps:
@@ -24,8 +24,8 @@ version: 2.1
     workflows:
       version: 2
       one_and_two:
-      jobs:
-         - one
-         - two
+        jobs:
+          - one
+          - two
          
 
